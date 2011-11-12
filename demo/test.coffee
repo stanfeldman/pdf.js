@@ -1,4 +1,4 @@
-PDFDocument = require 'pdfkit'
+PDFDocument = require '../index'
 tiger = require './tiger'
 
 # Create a new PDFDocument
@@ -16,9 +16,8 @@ doc.font('Palatino')
    .fontSize(25)
    .text('Some text with an embedded font!', 100, 100)
    .fontSize(18)
-   .text('PNG and JPEG images:')
-   .image('images/test.png', 100, 160, width: 412)
-   .image('images/test.jpeg', 190, 400, height: 300)
+   .text('JPEG image:')
+   .image('images/test.jpeg', 190, 200, height: 300)
 
 # Add another page
 doc.addPage()

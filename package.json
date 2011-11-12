@@ -1,26 +1,23 @@
 {
-  "name": "pdfkit",
+  "name": "pdf.js",
   "description": "A PDF generation library for Node.js",
   "keywords": ["pdf", "pdf writer", "pdf generator", "graphics", "document", "vector"],
-  "version": "0.1.6",
+  "version": "0.1.0",
   "homepage": "http://devongovett.github.com/pdfkit/",
   "author": {
       "name": "Devon Govett",
       "email": "devongovett@gmail.com",
       "url": "http://badassjs.com/"
   },
-  "repository": {
-      "type": "git",
-      "url": "https://github.com/devongovett/pdfkit.git"
+  "repository": "https://github.com/stanislavfeldman/pdf.js",
+  "bugs": "https://github.com/stanislavfeldman/pdf.js/issues",
+  "main": "index",
+  "dependencies": 
+  {
+      "coffee-script": "latest"
   },
-  "bugs": "http://github.com/devongovett/pdfkit/issues",
-  "directories": {
-      "lib": "./lib",
-      "example": "./demo"
-  },
-  "dependencies": {
-      "coffee-script": ">=1.0.1",
-      "flate": ">=1.0.2"
-  },
-  "engine": [ "node >= v0.4.0" ]
+  "engines": 
+  { 
+    "node": ">= 0.4.1" 
+  }
 }

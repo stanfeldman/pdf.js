@@ -3,8 +3,6 @@ PDFReference - represents a reference to another object in the PDF object heirar
 By Devon Govett
 ###
 
-zlib = require 'flate'
-
 class PDFReference
     constructor: (@id, @data = {}) ->
         @gen = 0
@@ -36,10 +34,7 @@ class PDFReference
                 # create a byte array instead of passing a string to the Buffer
                 # fixes a weird unicode bug.
                 data = new Buffer(data.charCodeAt(i) for i in [0...data.length])
-                compressedData = zlib.deflate(data)
-                @finalizedStream = compressedData.toString 'binary'
-                
-                @data.Filter = 'FlateDecode'
+                @finalizedStream = data.toString 'binary'
                 @data.Length ?= @finalizedStream.length
             else
                 @finalizedStream = data

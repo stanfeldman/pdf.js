@@ -6,7 +6,6 @@ By Devon Govett
 TTFFont = require './font/ttf'
 AFMFont = require './font/afm'
 Subset = require './font/subset'
-zlib = require 'flate'
 
 class PDFFont
     constructor: (@document, @filename, @family, @id) ->
@@ -80,14 +79,11 @@ class PDFFont
             
     embedTTF: ->
         data = @subset.encode()
-        compressedData = zlib.deflate(data)
-        
         @fontfile = @document.ref
-            Length: compressedData.length
+            Length: data.length
             Length1: data.length
-            Filter: 'FlateDecode'
             
-        @fontfile.add compressedData
+        @fontfile.add data
                 
         @descriptor = @document.ref
             Type: 'FontDescriptor'
