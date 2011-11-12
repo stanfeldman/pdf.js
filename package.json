@@ -4,11 +4,7 @@
   "keywords": ["pdf", "pdf writer", "pdf generator", "graphics", "document", "vector"],
   "version": "0.1.0",
   "homepage": "http://devongovett.github.com/pdfkit/",
-  "author": {
-      "name": "Devon Govett",
-      "email": "devongovett@gmail.com",
-      "url": "http://badassjs.com/"
-  },
+  "author": "Stanislav Feldman <stanislavfeldman@gmail.com>",
   "repository": "https://github.com/stanislavfeldman/pdf.js",
   "bugs": "https://github.com/stanislavfeldman/pdf.js/issues",
   "main": "index",
